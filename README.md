@@ -1,15 +1,15 @@
 # Data Lake with education and geolocation data
 The final project of the course involves building a data lake with educational data stored in a MongoDB database and from the IBGE (Brazilian Institute of Geography and Statistics) API. Then, the processed and filtered data should be used to build a data warehouse for querying business problems.
 
-To better divide the stages, two DAGs were created: `get_ibge_data.py` and get_pnadc_data.py.
+To better divide the stages, two DAGs were created: `get_ibge_data.py` and `get_pnadc_data.py`.
 
 # Steps
 
 - Table Construction
 For the ETL stages, two databases are being used: RDS Postgres and Redshift. Therefore, before starting the DAGs, it is necessary to create the tables to receive the data in these two databases.
 
-    Tables ibge_data and people_info: These are in this [script](), and they are the tables used to save the treated data in the RDS instance.
-    Tables filtered_people_info_mulheres_adultas, ibge_data_cities, ibge_data_states: These are in this [script](), and they are the tables to save the treated and filtered data in Redshift.
+    Tables ibge_data and people_info: These are in this [script](https://github.com/TalissaMoura/pipeline_for_datalake_enade/blob/main/querys/scripts_people_info.sql), and they are the tables used to save the treated data in the RDS instance.
+    Tables filtered_people_info_mulheres_adultas, ibge_data_cities, ibge_data_states: These are in this [script](https://github.com/TalissaMoura/pipeline_for_datalake_enade/blob/main/querys/scripts_filtered_people_info_mulheres_adultas.sql), and they are the tables to save the treated and filtered data in Redshift.
 
 - *get_ibge_data.py*
  
